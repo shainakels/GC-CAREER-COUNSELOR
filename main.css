@@ -1,0 +1,408 @@
+/* CSS FOR THE HOME HTML */
+
+/* START OF NAVBAR CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.logopic {
+    height: auto;
+    width: 60px;
+    margin-right: 10px;
+    margin-left: 20px;
+    margin-top: 8px;
+    position: fixed;
+    z-index: 101;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: seagreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 17.5px;
+    letter-spacing: 1;
+    color: #fff;
+    font-weight: 505;
+    text-decoration: none;
+    margin-left: 50px;
+}
+
+.navbar a::before {
+    content: ' ';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.checkbtn {
+    display: none;
+    margin-left: auto;
+    color: #fff;
+    font-size: 25px;
+}
+
+.side-menu {
+    display: none;
+    margin-top: 75px;
+    position: fixed;
+    top: -250px;
+    left: 0px;
+    /*INITIALLY HIDDEN*/
+    width: 100%;
+    height: 20%;
+    background: seagreen;
+    z-index: 2;
+    overflow-y: hidden;
+    transition: 0.3s;
+}
+
+.side-menu.active {
+    top: 0;
+    /*WHERE IT SLDIES IN WHEN ACTIVE*/
+}
+
+.side-menu ul {
+    justify-content: center;
+    list-style: none;
+    padding-top: 10px;
+    padding: 20px;
+}
+
+.side-menu li {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.side-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.side-menu a:hover {
+    color: #ffd517;
+}
+/* END OF NAVBAR CSS */
+
+.homepic {
+    width: 57%;
+    height: 630px;
+    position: relative;
+    left: 650px; 
+    top: 60px; 
+}
+
+#h1 {
+    position: absolute;
+    font-weight: 870%;
+    top: 35%;
+    left: 5%;
+    transform: translateY(-50%);
+    z-index: 1;
+    color: black;
+}
+
+p {
+    position: absolute;
+    font-size: medium;
+    top: 48%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: black;
+    line-height: 1.5;
+}
+
+.enroll-button {
+    background-color: seagreen;
+    position: absolute;
+    left: 5%;
+    top: 60%;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.enroll-button:hover {
+    background-color: #1e7e34;
+}
+
+/*FOR ANIMATION WHEN OPENING PAGE*/
+@keyframes slideUp {
+    from {
+      transform: translateY(100%); /*STARTS ANIMATION FROM BELOW*/
+    }
+    to {
+      transform: translateY(0); /*MOVES ELEMENT TO THEIR ORIGINAL POSITION*/
+    }
+  }
+  
+  .logopic,
+  .header,
+  .logo,
+  .navbar,
+  .enroll-button,
+  .enroll-button:hover
+  .homepic,
+  img,
+  h1,
+  p {
+    animation-name: slideUp;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: alternate;
+  }  
+  
+/*MEDIA QUERY START*/
+@media (max-width: 952px) {
+    .navbar ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    .navbar a {
+        display: none;
+        margin: 50px 0;
+        line-height: 30px;
+        font-size: 20px;
+    }
+
+    .side-menu {
+        display: block;
+    }
+
+    .side-menu a {
+        color: white
+    }
+
+    .checkbtn {
+        display: block;
+        /*CHECKBTN DISPLAYS WHEN SCREEN IS SMALL*/
+        margin-left: auto;
+    }
+
+    .homepic {
+        display: none;
+    }
+
+    #h1 {
+        top: 30%;
+    }
+
+    p {
+        top: 50%
+    }
+
+    .enroll-button {
+        top: 75%;
+    }
+
+    .logopic {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    .navbar a {
+        display: none;
+        margin: 50px 0;
+        line-height: 30px;
+        font-size: 20px;
+    }
+
+    .side-menu {
+        display: block;
+    }
+
+    .side-menu a {
+        color: white
+    }
+
+    .checkbtn {
+        display: block;
+        /*CHECKBTN DISPLAYS WHEN SCREEN IS SMALL*/
+        margin-left: auto;
+    }
+
+    .homepic {
+        display: none;
+    }
+
+    #h1 {
+        top: 30%;
+    }
+
+    p {
+        top: 50%
+    }
+
+    .enroll-button {
+        top: 70%;
+    }
+
+    .logopic {
+        display: none;
+    }
+}
+/*PHONE*/
+@media (min-width:375px) and (max-width: 800px) {
+    .navbar ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    .navbar a {
+        display: none;
+        margin: 50px 0;
+        line-height: 30px;
+        font-size: 20px;
+    }
+
+    .side-menu {
+        display: block;
+    }
+
+    .side-menu a {
+        color: white
+    }
+
+    .checkbtn {
+        display: block;
+        /*CHECKBTN DISPLAYS WHEN SCREEN IS SMALL*/
+        margin-left: auto;
+    }
+
+    .homepic {
+        display: none;
+    }
+
+    #h1 {
+        margin-top: 5%; 
+    }
+
+    p {
+        margin-top: 15%
+    }
+
+    .enroll-button {
+        margin-top: 15%;
+    }
+
+    .logopic {
+        display: none;
+    }
+}
+/*IPAD*/
+@media (min-width:768px) and (max-width: 1024px) {
+    .navbar ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    .navbar a {
+        display: none;
+        margin: 50px 0;
+        line-height: 30px;
+        font-size: 20px;
+    }
+
+    .side-menu {
+        display: block;
+    }
+
+    .side-menu a {
+        color: white
+    }
+
+    .checkbtn {
+        display: block;
+        /*CHECKBTN DISPLAYS WHEN SCREEN IS SMALL*/
+        margin-left: auto;
+    }
+
+    .homepic {
+        display: none;
+    }
+
+    #h1 {
+        margin-top: 5%;    
+    }
+
+    p {
+        margin-top: 2%
+    }
+
+    .enroll-button {
+        margin-top: -5%;
+    }
+
+    .logopic {
+        display: none;
+    }
+}
+
+/*END OF MEDIA QUERY*/
